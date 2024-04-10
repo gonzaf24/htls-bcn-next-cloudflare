@@ -211,7 +211,7 @@ const bar_speakeasy = [
   },
 ];
 
-const bar_instagrameable = [
+const bar_instagrammable = [
   {
     categories: [2],
     subcategories: [103],
@@ -310,11 +310,11 @@ const bars_subcategories = [
     id: '103',
     category_id: '2',
     name: 'Instagrameable',
-    t_name: 'subcat_instagrameable',
-    icon: 'instagrameable.svg',
+    t_name: 'subcat_instagrammable',
+    icon: 'instagrammable.svg',
   },
 ];
 
-const bars_places = [...bar_terraces, ...bar_rooftops, ...bar_speakeasy, ...bar_instagrameable];
+const bars_places = [...bar_terraces, ...bar_rooftops, ...bar_speakeasy, ...bar_instagrammable];
 
 module.exports = { bars_subcategories, bars_places };
