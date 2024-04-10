@@ -7,10 +7,13 @@ import Link from 'next/link';
 import BookmarksIcon from '../icons/BookmarksIcon';
 import ThemeChanger from './ThemeChanger';
 import LanguageChanger from '@/components/header/LanguageChanger';
+import { Classic } from '@theme-toggles/react';
+import { useTheme } from 'next-themes';
 
 export function UserMenu() {
   const { t } = useTranslation();
   const { user, logout } = useUserContext();
+  const { theme } = useTheme();
 
   return (
     <div className="flex flex-col items-center gap-2">
@@ -40,8 +43,18 @@ export function UserMenu() {
                 <Link href="/bookmarks"> {t('my-bookmarks')} </Link>
               </div>
             </DropdownItem>
-            <DropdownItem key="theme" endContent={<ThemeChanger />}>
-              <p>{t('theme')}</p>
+            <DropdownItem  key="theme" endContent={<ThemeChanger />}>
+              <div className='flex justify-center items-center gap-1'>
+                <p>{t('theme')}</p>
+                <Classic
+                  duration={500}
+                  toggled={theme !== 'light'}
+                  className={'theme-switcher-icon'}
+                  placeholder="" 
+                  onPointerEnterCapture={undefined} 
+                  onPointerLeaveCapture={undefined} 
+                />
+              </div>
             </DropdownItem>
             <DropdownItem showDivider key="language" endContent={<LanguageChanger />}>
               <p>{t('language')}</p>

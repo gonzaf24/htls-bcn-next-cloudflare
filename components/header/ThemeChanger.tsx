@@ -48,15 +48,17 @@ export default function ThemeChanger() {
           {themeOptions}
         </Select>
       )}
-      <Classic
-        duration={500}
-        toggled={theme !== 'light'}
-        toggle={toggleDarkMode}
-        className={'theme-switcher-icon'}
-        placeholder=""
-        onPointerEnterCapture={() => {}}
-        onPointerLeaveCapture={() => {}}
-      />
+      {!isAuthenticated && (
+        <Classic
+          duration={500}
+          toggled={theme !== 'light'}
+          toggle={toggleDarkMode}
+          className={'theme-switcher-icon'}
+          placeholder=""
+          onPointerEnterCapture={undefined} 
+          onPointerLeaveCapture={undefined} 
+        />
+      )}
     </>
   );
 }
