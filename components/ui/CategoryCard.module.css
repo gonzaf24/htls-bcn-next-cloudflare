@@ -1,0 +1,26 @@
+.food {
+  border-color: var(--c-bg-food);
+  border-width: 3px;
+}
+
+.food:hover {
+  background-color: var(--c-bg-food);
+}
+
+.bar {
+  border-color: var(--c-bg-bar);
+  border-width: 3px;
+}
+
+.bar:hover {
+  background-color: var(--c-bg-bar);
+}
+
+.entertainment {
+  border-color: var(--c-bg-entertainment);
+  border-width: 3px;
+}
+
+.entertainment:hover {
+  background-color: var(--c-bg-entertainment);
+}

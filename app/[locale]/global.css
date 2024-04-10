@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-primary: #ffffff; /* Blanco */
+  --text-secondary: #333333; /* Negro */
+  --primary: #1a237e; /* blue */
+  --secondary: #6a1b9a; /* purple */
+  --warning: #ff6f00; /* orange */
+  --success: #4caf50; /* green */
+  --danger: #ff0000; /* red */
+  --c-food: #ff6f00; /* orange */
+  --c-bar: #ff0000; /* red */
+  --c-entertainment: #6a1b9a; /* purple */
+  --c-bookmarks: #39763b;
+  --c-highlights: #f82555; /* orange */
+  --c-gray-20: #ffffff33; /* gray */
+  --c-bg-food: #7c2d12;
+  --c-bg-bar: #7f1d1d;
+  --c-bg-entertainment: #312e81;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.theme-switcher-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--c-highlights);
+}
+
+.theme-toggle.theme-toggle--reversed .theme-toggle__classic {
+  transform: scaleX(-1);
+}
+.theme-toggle {
+  --theme-toggle__classic--duration: 0.5s;
+}
+.theme-toggle__classic path {
+  transition-timing-function: cubic-bezier(0, 0, 0.15, 1.25);
+  transform-origin: center;
+  transition-duration: calc(var(--theme-toggle__classic--duration) * 0.8);
+}
+.theme-toggle__classic g path {
+  transition-property: opacity, transform;
+  transition-delay: calc(var(--theme-toggle__classic--duration) * 0.2);
+}
+.theme-toggle__classic :first-child path {
+  transition-property: transform, d;
+}
+.theme-toggle--toggled.theme-toggle .theme-toggle__classic g path {
+  transform: scale(0.5) rotate(45deg);
+  opacity: 0;
+  transition-delay: 0s;
+}
+.theme-toggle--toggled.theme-toggle .theme-toggle__classic :first-child path {
+  d: path('M-12 5h30a1 1 0 0 0 9 13v24h-39Z');
+  transition-delay: calc(var(--theme-toggle__classic--duration) * 0.2);
+}
+@supports not (d: path('')) {
+  .theme-toggle--toggled.theme-toggle .theme-toggle__classic :first-child path {
+    transform: translate3d(-12px, 10px, 0);
+  }
+}
+.theme-toggle {
+  border: none;
+  background: 0 0;
+  cursor: pointer;
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle:not(.theme-toggle--force-motion) * {
+    transition: none !important;
+  }
+}

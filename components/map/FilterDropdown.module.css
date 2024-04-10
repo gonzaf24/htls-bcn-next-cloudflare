@@ -1,0 +1,27 @@
+.food ::after {
+  background-color: var(--c-food);
+}
+
+.bar ::after {
+  background-color: var(--c-bar);
+}
+
+.entertainment ::after {
+  background-color: var(--c-entertainment);
+}
+
+/* .bookmarks ::after {
+  transition: none !important;
+  background-color: transparent !important;
+} */
+
+/* .bookmarks:hover ::after {
+  transition: none !important;
+  background-color: transparent !important;
+}
+
+.bookmarks:hover ::before {
+  transition: none !important;
+  background-color: transparent !important;
+}
+ */
