@@ -1,9 +1,12 @@
 {
-    "builds": [
-      { "src": "package.json", "use": "@now/static-build" }
-    ],
     "routes": [
-      { "src": "/", "dest": "/index.html" }
-    ]
+      { "src": "/(.*)", "dest": "/$1" }
+    ],
+    "build": {
+      "publish": ".next",
+      "ignore": [
+        "node_modules"
+      ],
+      "command": "npm run build"
+    }
   }
-  
