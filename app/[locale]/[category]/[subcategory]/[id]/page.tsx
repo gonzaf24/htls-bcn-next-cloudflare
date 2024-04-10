@@ -6,6 +6,7 @@ import { ImageLogo } from '@/components/ui/ImageLogo';
 import { fetchPlace } from '@/lib/actions';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+export const runtime = 'edge';
 
 export default async function PlaceIDPage({ params }: { params: { locale: string; id: string } }) {
   const id = params.id;

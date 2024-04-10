@@ -4,6 +4,7 @@ import { Place } from '@/lib/interfaces';
 import { AppConfig } from '@/config/appConfig';
 import { fetchCategories, fetchPlace, fetchPlaces, fetchSubcategories } from '@/lib/data';
 import { Category, Subcategory } from '@/lib/definitions';
+export const runtime = 'edge';
 
 export default async function Page({ params, searchParams }: any) {
   const { t } = await initTranslations(params.locale, AppConfig.i18nNamespaces);

@@ -5,6 +5,7 @@ import { fetchPlace } from '@/lib/actions';
 import { notFound } from 'next/navigation';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import { ImageLogo } from '@/components/ui/ImageLogo';
+export const runtime = 'edge';
 
 export default async function PlacePage({ params }: { params: { locale: string; id: string } }) {
   const id = parseInt(params.id);

@@ -10,6 +10,7 @@ import { useBookmarkContext } from '@/app/context/bookmarksContext';
 import { CategoriesSkeleton } from '@/components/ui/Skeletons';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import { AppConfig } from '@/config/appConfig';
+export const runtime = 'edge';
 
 export default function BookmarksPage({ params: { locale } }: { params: { locale: string } }) {
   const { t } = useTranslation();

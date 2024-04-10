@@ -3,6 +3,7 @@ import { SubcategoryCard } from '@/components/ui/SubcategoryCard';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import { AppConfig } from '@/config/appConfig';
 import { fetchPlacesBySubcategoryId, fetchSubcategoryById } from '@/lib/actions';
+export const runtime = 'edge';
 
 const APP_ROUTES_VALUES = Object.values(AppConfig.APP_ROUTES);
 

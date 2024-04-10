@@ -4,6 +4,7 @@ import initTranslations from '@/app/[locale]/i18n';
 import { notFound } from 'next/navigation';
 import { AppConfig } from '@/config/appConfig';
 import { fetchSubcategories } from '@/lib/actions';
+export const runtime = 'edge';
 
 const APP_ROUTES_VALUES = Object.values(AppConfig.APP_ROUTES);
 
